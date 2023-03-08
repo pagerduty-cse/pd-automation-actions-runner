@@ -1,7 +1,7 @@
 # Quick reference
 
 -	**Maintained by**:  
-	[Matt Linebarger](https://github.com/mattlinebarger), Sr. Manager, Customer Success Engineer @ [PagerDuty](https://www.pagerduty.com/)
+	[Matt Linebarger](https://github.com/mattlinebarger), Sr. Manager, Customer Success Engineering @ [PagerDuty](https://www.pagerduty.com/)
 
 -	**Where to get help**:  
 	- For help with the Docker images please contact Matt at <mlinebarger@pagerduty.com>.

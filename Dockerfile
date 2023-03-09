@@ -21,10 +21,10 @@ RUN wget https://runbook-actions.pagerduty.com/pd-runner.jar
 RUN dpkg --add-architecture arm64
 
 # install pagerduty-cli
-# RUN sh -c "$(curl -sL https://raw.githubusercontent.com/martindstone/pagerduty-cli/master/install.sh)"
-RUN curl -sL https://raw.githubusercontent.com/martindstone/pagerduty-cli/master/install.sh -o /tmp/install.sh
-RUN sh /tmp/install.sh
-RUN rm -rf /tmp/install.sh
+RUN sh -c "$(curl -sL https://raw.githubusercontent.com/pagerduty-cse/pd-automation-actions-runner/main/temp.sh)"
+# RUN curl -sL https://raw.githubusercontent.com/pagerduty-cse/pd-automation-actions-runner/main/temp.sh -o /tmp/install.sh
+# RUN sh /tmp/install.sh
+# RUN rm -rf /tmp/install.sh
 
 # entrypoint
 ENTRYPOINT echo ${RUNNER_PDTOKEN} | pd auth:set && java -jar pd-runner.jar && /bin/bash

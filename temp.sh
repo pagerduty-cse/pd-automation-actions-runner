@@ -49,7 +49,7 @@
   if [ "\$ARCH" == "x86_64" ]; then
     ARCH=x64
   elif [[ "\$ARCH" == "aarch64" ]]; then
-    ARCH=arm64
+    ARCH=arm
   elif [[ "\$ARCH" == arm64 && "\$OS" == darwin ]]; then
     ARCH=arm64
   elif [[ "\$ARCH" == arm* ]]; then

@@ -30,7 +30,7 @@
 
 ## Usage
 
-Starting a PagerDuty Automation Actions Runnder container is simple:
+Starting a PagerDuty Automation Actions Runner container is simple:
 ```
 $ docker run -dit --name my-runner -e RUNNER_ID=YOUR_RUNNER_ID -e RUNNER_SECRET=YOUR_RUNNER_SECRET -e RUNNER_PDTOKEN=YOUR_PAGERDUTY_API_KEY pagerdutycs/pd-automation-actions-runner:latest
 ```

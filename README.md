@@ -1,10 +1,10 @@
 # Quick reference
 
 -	**Maintained by**:  
-	[Matt Linebarger](https://github.com/mattlinebarger), Sr. Manager, Customer Success Engineering @ [PagerDuty](https://www.pagerduty.com/)
+	Customer Success Engineering @ [PagerDuty](https://www.pagerduty.com/)
 
 -	**Where to get help**:  
-	- For help with the Docker images please contact Matt at <mlinebarger@pagerduty.com>.
+	- For help with the Docker images please contact the Customer Success Engineering team at <cse@pagerduty.com>.
 	- For help with Automation Actions visit the [PagerDuty Knowledge Base](https://support.pagerduty.com/docs/automation-actions).
 	- PagerDuty CLI please check out the [PagerDuty CLI User Guide](https://github.com/martindstone/pagerduty-cli/wiki/PagerDuty-CLI-User-Guide).
 

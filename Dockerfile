@@ -20,5 +20,8 @@ RUN apt-get install -y openjdk-11-jre-headless
 RUN mkdir -p /opt/automation_runner
 WORKDIR /opt/automation_runner
 
-# entrypoint (install pagerduty-cli, install automation_runner, set pdtoken, run automation_runner)
-ENTRYPOINT sh -c "$(curl -sL https://raw.githubusercontent.com/martindstone/pagerduty-cli/master/install.sh)" | wget https://runbook-actions.pagerduty.com/pd-runner.jar | echo ${RUNNER_PDTOKEN} | pd auth:set && java -jar pd-runner.jar && /bin/bash
+# install pagerduty-cli
+RUN sh -c "$(curl -sL https://raw.githubusercontent.com/martindstone/pagerduty-cli/master/install.sh)"
+
+# entrypoint (install automation_runner, set pdtoken, run automation_runner)
+ENTRYPOINT wget https://runbook-actions.pagerduty.com/pd-runner.jar | echo ${RUNNER_PDTOKEN} | pd auth:set && java -jar pd-runner.jar && /bin/bash

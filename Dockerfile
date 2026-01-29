@@ -13,6 +13,13 @@ RUN apt-get install -y apt-utils
 RUN apt-get install -y curl 
 RUN apt-get install -y wget
 
+#python
+RUN apt update && apt upgrade -y &&\
+    apt install python3 python3-pip -y &&\
+    pip install pywinrm &&\
+    pip install pyyaml
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
 # install java
 RUN apt-get install -y openjdk-11-jre-headless
 

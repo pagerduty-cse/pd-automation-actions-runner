@@ -15,10 +15,15 @@ RUN apt-get install -y wget
 
 #python
 RUN apt update && apt upgrade -y &&\
+    apt install curl -y &&\
     apt install python3 python3-pip -y &&\
     pip install pywinrm &&\
+    pip install kubernetes &&\
     pip install pyyaml
 RUN ln -s /usr/bin/python3 /usr/bin/python
+
+#kubernetes
+RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && chmod +x kubectl && mv kubectl /usr/local/bin/
 
 # install java
 RUN apt-get install -y openjdk-11-jre-headless

@@ -10,16 +10,15 @@ ENV RUNNER_CLOUD_RDKCLIENT_TOKEN=""
 # get the essentials
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install -y apt-utils
-RUN apt-get install -y curl 
+RUN apt-get install -y curl
 RUN apt-get install -y wget
 
 #python
 RUN apt update && apt upgrade -y &&\
-    apt install curl -y &&\
     apt install python3 python3-pip -y &&\
-    pip install pywinrm &&\
-    pip install kubernetes &&\
-    pip install pyyaml
+    pip install pywinrm --break-system-packages &&\
+    pip install kubernetes --break-system-packages &&\
+    pip install pyyaml --break-system-packages
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
 #kubernetes
